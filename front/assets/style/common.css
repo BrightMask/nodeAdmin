@@ -1,0 +1,11 @@
+.page-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.page-content{
+  padding: 8px ;
+}
+.page-container-content{
+  background-color: #fff;
+}
