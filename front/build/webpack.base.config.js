@@ -1,9 +1,13 @@
 const utils = require("./utils")
 const path = require("path")
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+
 module.exports = {
     // 入口
     entry: {
-        app: "./app.js" 
+        app: "./app.js" ,
+        login: './login.js'
     },
     // 出口
     output: {
@@ -72,6 +76,18 @@ module.exports = {
     },
     node: {
         fs: 'empty'
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './index.html',
+            filename: 'index.html',
+            chunks: ['index']
+        }),
+        new HtmlWebpackPlugin({
+            template: './login.html',
+            filename: 'login.html',
+            chunks: ['login']
+        })
+    ]
 }
 

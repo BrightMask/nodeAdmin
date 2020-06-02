@@ -1,41 +1,52 @@
 import React, {Component} from 'react';
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button, Checkbox} from 'antd';
+import ReactDom from 'react-dom';
 
+import { UserOutlined, LockOutlined } from '@ant-design/icons';
+
+import './assets/style/common.css'
 const layout = {
     labelCol: { span: 8 },
     wrapperCol: { span: 16 },
   };
-class Login extends Component {
-    constructor(props) {
-        super(props)
-    }
-    render () {
-        return (
-            <Form
+const Login = () =>  {
+
+    const [form] = Form.useForm()
+    
+    
+    return (
+        <div className="login-page">
+                <Form
                 {...layout}
+                form={form}
                 name="basic"
                 initialValues={{ remember: true }}
-                onFinish={onFinish}
-                onFinishFailed={onFinishFailed}
+                className="login-form"
             >
-                 <Form.Item
+                
+                <Form.Item
                     name="username"
                     rules={[{ required: true, message: 'Please input your Username!' }]}
                 >
-                    <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" />
+                   
+                    <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="用户名" />
                 </Form.Item>
                 <Form.Item
                     name="password"
                     rules={[{ required: true, message: 'Please input your Password!' }]}
                 >
-                     <Input
+                    <Input
                         prefix={<LockOutlined className="site-form-item-icon" />}
                         type="password"
-                        placeholder="Password"
+                        placeholder="密码"
                         />
                 </Form.Item>
+                <Form.Item>
+                    <Button type="primary" className="login-submit-btn"> 登录</Button>
+                </Form.Item>
             </Form>
-        )
-    }
+        </div>
+        
+    )
 }
-export default Login
+ReactDom.render(<Login/>,document.getElementById("login"))

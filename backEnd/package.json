@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon -w ./ app.js"
+  },
+  "keywords": [
+    "koa2"
+  ],
+  "author": "Brady",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.4.1",
+    "koa-bodyparser": "^3.2.0",
+    "koa-cors": "0.0.16",
+    "koa-router": "^7.3.0",
+    "mongoose": "^4.13.6",
+    "nodemon": "^1.12.1"
+  }
+}
