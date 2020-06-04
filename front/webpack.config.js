@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-04-07 16:59:04
+ * @LastEditTime: 2020-06-04 15:40:53
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: /NodeAdmin/front/webpack.config.js
+ */ 
 const path = require('path');
 module.exports = {
   // 项目入口文件 支持 str | [] | {}
@@ -55,5 +63,5 @@ module.exports = {
     
   ],
   // 是否开启 source-map
-  devtool: 'cheap-module-eval-source-map'
+//   devtool: 'cheap-module-eval-source-map'
 }

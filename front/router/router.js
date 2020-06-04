@@ -1,38 +1,21 @@
+/*
+ * @Author: your name
+ * @Date: 2020-04-10 10:53:36
+ * @LastEditTime: 2020-06-04 17:14:25
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /NodeAdmin/front/router/router.js
+ */ 
 export const RouterMap = [
     {
         name: '首页',
-        path: 'homepage'
-    },
-    {
-        name: '首页',
         path: 'homepage',
-        children: [
-            {
-                name: '鲜花',
-                path: 'flowers'
-            },
-            {
-                name: '绿植',
-                path: 'plant'
-            },
-            {
-                name: '资材',
-                path: 'materials'
-            }
-        ]
+        component: './containers/homepage/index.js'
     },
     {
-        name: '财务',
-        path: 'finance',
-        children: [
-            {
-                name: '进货',
-                path: 'stock'
-            },
-            {
-                name: '销货',
-                path: 'sales'
-            }
-        ]
+        name: '用户管理',
+        path: 'userManager',
+        component: './containers/user/index.js'
+
     }
 ]
