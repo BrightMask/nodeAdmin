@@ -16,7 +16,8 @@
     "koa-bodyparser": "^3.2.0",
     "koa-cors": "0.0.16",
     "koa-router": "^7.3.0",
-    "mongoose": "^4.13.6",
+    "koa-static": "^5.0.0",
+    "mongoose": "^4.13.20",
     "nodemon": "^1.12.1"
   }
 }
